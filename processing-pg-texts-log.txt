@@ -1,8 +1,9 @@
 download
 wget -H -w 2 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=en 
+##where -h is recursive and "-w 2" is a two second delay between requests
 
 unzip
 while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name "*.zip" -exec unzip -- '{}' \; -exec rm -- '{}' \;; done
 
-trip
-566-958
+trim/cut
+sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
