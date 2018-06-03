@@ -4,6 +4,16 @@ wget -H -w 2 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=e
 
 unzip
 while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name "*.zip" -exec unzip -- '{}' \; -exec rm -- '{}' \;; done
+##command cycles through subdirectories unzipping, and placing unzipped file in parent directory where script was intiated
 
 trim/cut
 sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
+##after confirming sed is removing correctly, remove -i'.bak' which edits file inplace
+##potential additions to sed include -u -n options
+
+other helpful commands
+wc -l < 10002.txt 10002.txt.bak
+##to count the lines in the files to see if the licensing data tail has been cleaned
+
+diff 10002.txt 10002.txt.bak 
+##will compare the two files and output the differences
