@@ -6,6 +6,9 @@ unzip
 while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name "*.zip" -exec unzip -- '{}' \; -exec rm -- '{}' \;; done
 ##command cycles through subdirectories unzipping, and placing unzipped file in parent directory where script was intiated
 
+##remove first seven files from database; these lack the PG TOS following ebook; impacted by later trimming
+rm 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt
+
 trim/cut
 sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
 ##after confirming sed is removing correctly, remove -i'.bak' which edits file inplace
