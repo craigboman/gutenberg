@@ -10,8 +10,11 @@ while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name 
 rm 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt
 
 trim/cut
+##All project gutenberg ebooks contain a terms of service contract at the end of the book; great for lawyers, not
+##great for data science tasks. You will need to remove the terms of service, and potentially the beginning too.
 sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
-##after confirming sed is removing correctly, remove -i'.bak' which edits file inplace
+##after confirming sed is removing correctly, remove -i'.bak' which edits file inplace, otherwise a backup of each
+##file will be made.
 ##potential additions to sed include -u -n options
 
 other helpful commands
@@ -20,3 +23,14 @@ wc -l < 10002.txt 10002.txt.bak
 
 diff 10002.txt 10002.txt.bak 
 ##will compare the two files and output the differences
+
+##archiving
+##you will be making lots of edits to lots of files; this would be a good time to start talking about version
+##control. I would recommend getting an external hard drive or remote storage option (assuming you have a super fast
+##internet connect) otherwise stick with physical drive backup. After you've unzipped your files and started trim,
+##you will need to store the .txt.bak files somewhere, and potentially make copies of the trimmed *.txt files.
+
+rsync -r --include='*.txt' --exclude='*' . ../prjshp
+##run this in the source directory and replace ../prjshp with the desired storage directory or device
+
+
