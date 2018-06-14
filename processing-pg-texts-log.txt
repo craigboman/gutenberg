@@ -1,3 +1,5 @@
+##These are some linux commands to help data scientists prepare project gutenberg english ebooks for analysis
+
 download
 wget -H -w 2 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=en 
 ##where -h is recursive and "-w 2" is a two second delay between requests
@@ -32,5 +34,7 @@ diff 10002.txt 10002.txt.bak
 
 rsync -r --include='*.txt' --exclude='*' . ../prjshp
 ##run this in the source directory and replace ../prjshp with the desired storage directory or device
-
+##mv and cp commands are also helpful but the cp command has a max number of files it can run against and mv does
+##not work since it does not leave a copy of the file behind. Rysnc is the best command for making copies of 80,000
+##ebooks txt files
 
