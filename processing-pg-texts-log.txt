@@ -30,10 +30,11 @@ diff 10002.txt 10002.txt.bak
 ##you will be making lots of edits to lots of files; this would be a good time to start talking about version
 ##control. I would recommend getting an external hard drive or remote storage option (assuming you have a super fast
 ##internet connect) otherwise stick with physical drive backup. After you've unzipped your files and started trim,
-##you will need to store the .txt.bak files somewhere, and potentially make copies of the trimmed *.txt files.
+##you will need to store the .txt.bak files somewhere, and potentially make copies of the trimmed *.txt files. The files
+##expand from 14GB zipped to around 40GB unzipped.
 
-rsync -r --include='*.txt' --exclude='*' . ../prjshp
-##run this in the source directory and replace ../prjshp with the desired storage directory or device
+rsync -r --include='*.txt' --exclude='*' . ../dirFullOfEbooks
+##run this in the source directory and replace ../dirFullOfEbooks with the desired storage directory or device
 ##mv and cp commands are also helpful but the cp command has a max number of files it can run against and mv does
 ##not work since it does not leave a copy of the file behind. Rysnc is the best command for making copies of 80,000
 ##ebooks txt files
