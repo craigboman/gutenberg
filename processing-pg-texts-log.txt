@@ -38,3 +38,6 @@ rsync -r --include='*.txt' --exclude='*' . ../prjshp
 ##not work since it does not leave a copy of the file behind. Rysnc is the best command for making copies of 80,000
 ##ebooks txt files
 
+##depending on what tool you pick (NLP or ML tools) you may then have to zip the files again to upload to an S3 bucket
+##or a Floyd-hub cloud storage. In which case you may want to keep the original .txt file and zip a copy to another directory
+zip -r  /path/to/save/destination_folder.zip /path/to/folder 
