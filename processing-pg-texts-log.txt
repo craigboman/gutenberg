@@ -48,4 +48,4 @@ zip -r  /path/to/save/destination_folder.zip /path/to/folder
 
 
 ##you may also need to download all of the project gutenberg metadata
-wget http://www.gutenberg.org/cache/epub/feeds/rdf-files.tar.zip
+wget http://www.gutenberg.org/cache/epub/feeds/rdf-files.tar.zip && unzip rdf-files.tar.zip && tar -xvf *.tar
