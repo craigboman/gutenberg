@@ -26,6 +26,9 @@ wc -l < 10002.txt 10002.txt.bak
 diff 10002.txt 10002.txt.bak 
 ##will compare the two files and output the differences
 
+du -sh /directory
+##this will give you a rough number of storage used by a specific directory, containing your gutenberrg files
+
 ##archiving
 ##you will be making lots of edits to lots of files; this would be a good time to start talking about version
 ##control. I would recommend getting an external hard drive or remote storage option (assuming you have a super fast
