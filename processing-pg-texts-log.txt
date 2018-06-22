@@ -15,7 +15,7 @@ trim/cut
 ##All project gutenberg ebooks contain a terms of service contract at the end of the book; great for lawyers, not
 ##great for data science tasks. You will need to remove the terms of service, and potentially the beginning too.
 sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
-##after confirming sed is removing correctly, remove -i'.bak' which edits file inplace, otherwise a backup of each
+##after confirming sed is removing correctly, remove '.bak' but leaving the -i, which edits file inplace, otherwise a backup of each
 ##file will be made.
 ##potential additions to sed include -u -n options
 
