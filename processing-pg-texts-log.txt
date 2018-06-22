@@ -11,13 +11,18 @@ while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name 
 ##remove first seven files from database; these lack the PG TOS following ebook; impacted by later trimming
 rm 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt
 
-trim/cut
+triming text from files conditionally
 ##All project gutenberg ebooks contain a terms of service contract at the end of the book; great for lawyers, not
 ##great for data science tasks. You will need to remove the terms of service, and potentially the beginning too.
 sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
 ##after confirming sed is removing correctly, remove '.bak' but leaving the -i, which edits file inplace, otherwise a backup of each
 ##file will be made.
 ##potential additions to sed include -u -n options
+
+##after trimming the files of the trailing terms of service you may also need to check for other text you need to remove and see how many files have said text
+grep -rnw '/home/marvin/projects/archive' -e '*** START OF THIS PROJECT GUTENBERG EBOOK' | wc -l
+##this will count the total ebooks with the single quoted text '*** START OF'...etc
+
 
 other helpful commands
 wc -l < 10002.txt 10002.txt.bak
@@ -49,3 +54,5 @@ zip -r  /path/to/save/destination_folder.zip /path/to/folder
 
 ##you may also need to download all of the project gutenberg metadata
 wget http://www.gutenberg.org/cache/epub/feeds/rdf-files.tar.zip && unzip rdf-files.tar.zip && tar -xvf *.tar
+
+
