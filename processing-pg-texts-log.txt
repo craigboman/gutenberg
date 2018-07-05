@@ -23,6 +23,11 @@ sed -i'.bak' '/END OF THIS PROJECT GUTENBERG EBOOK/,$d' *.txt
 grep -rnw '/home/marvin/projects/archive' -e '*** START OF THIS PROJECT GUTENBERG EBOOK' | wc -l
 ##this will count the total ebooks with the single quoted text '*** START OF'...etc
 
+##if you find text at the beginning which you want to delete, across the entire project gutenberg collection
+##this commands looks the same as trimming the TOS from the end, except the $!d command deletes quoted text prior 
+##to the comma, where removing the ! deletes lines after the quoted text
+sed -i '/START OF THIS PROJECT GUTENBERG EBOOK/,$!d' *.txt
+
 
 other helpful commands
 wc -l < 10002.txt 10002.txt.bak
