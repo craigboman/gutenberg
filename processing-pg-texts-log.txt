@@ -24,7 +24,8 @@ grep -rnw '/home/marvin/projects/archive' -e '*** START OF THIS PROJECT GUTENBER
 
 ##if you find text at the beginning which you want to delete, across the entire project gutenberg collection
 ##this commands looks the same as trimming the TOS from the end, except the $!d command deletes quoted text prior 
-##to the comma, where removing the ! deletes lines after the quoted text
+##to the comma, where removing the ! deletes lines after the quoted text. Any files in this directory ending in
+##.txt will be trimmed.
 sed -i '/START OF THIS PROJECT GUTENBERG EBOOK/,$!d' *.txt
 
 
