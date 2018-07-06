@@ -1,4 +1,6 @@
-#import string
+#borrowed heavily from https://machinelearningmastery.com/how-to-develop-a-word-level-neural-language-model-in-keras
+
+import string
 
 # load doc into memory
 def load_doc(filename):
@@ -32,5 +34,21 @@ def save_doc(lines, filename):
 	file.write(data)
 	file.close()
 
+#loads and cleans the doc
+def loadClean(dirt):
+	doc = load_doc(dirt)
+	tokens = clean_doc(doc)
+	
+	# organize into sequences of tokens
+	length = 50 + 1
+	sequences = list()
+	for i in range(length, len(tokens)):
+		# select sequence of tokens
+		seq = tokens[i-length:i]
+		# convert into a line
+		line = ' '.join(seq)
+		# store
+		sequences.append(line)
 
-
+	out_filename = 'republic_sequences.txt'	
+	save_doc(sequences, out_filename)
