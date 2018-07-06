@@ -1,6 +1,6 @@
 ##These are some linux commands to help data scientists prepare project gutenberg english ebooks for analysis
 ##ALTHOUGH THESE SCRIPTS WORKED FOR ME, THEY MAY NOT WORK FOR YOU ON A DIFFERENT SYSTEM. USE AT YOUR OWN RISK
-##Despite this, if you have access to a linu terminal, these scripts will be super useful.
+##Despite this, if you have access to a linux terminal, these bash scripts will be super useful.
 
 download
 wget -H -w 2 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=en 
