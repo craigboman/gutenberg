@@ -9,6 +9,13 @@ name = "pypi"
 tokenizer = "*"
 keras = "*"
 tensorflow = "*"
+scipy = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+statsmodels = "*"
+sklearn = "*"
+theano = "*"
 
 [requires]
 python_version = "3.5"

@@ -1,12 +1,12 @@
 from process_doc import load_doc
 from keras.preprocessing.text import Tokenizer
 from numpy import array
-from keras.utils import to categorical
+from keras.utils import to_categorical
 
 def loadSeqEncode(filename):
 	##loads clean sequences and tokenizes
 
-	doc = load_doc(filename)
+	doc = load_doc(filename) #load republic_sequences.txt
 	lines = doc.split('\n')
 	
 	#will not run without import tokenizer from keras
