@@ -71,3 +71,5 @@ grep -rnwL '/home/marvin/projects/archive' -f ../carriage.txt | wc -l
 
 ##writes the filenames to a file not matching conditional file.txt text
 grep -rwL '/home/marvin/projects/archive' -f ../carriage.txt > ../missing-header.txt
+
+##Metadata problems exist at source; non-english ebooks retrieved despite limit; need cleaning
