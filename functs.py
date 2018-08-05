@@ -10,15 +10,19 @@ def unzp(zip_file_url):
 
 
 def read():
-    books = 
-	['archive/31279-8.txt',
-	'archive/43999.txt',
-	'archive/31256-8.txt',
-	'archive/41256-8.txt',
-	'archive/37840-8.txt',
-	'archive/37825-8.txt',
-	'archive/37766-8.txt',
-	'archive/31125-8.txt']
+
+
+    books = ['archive/24269-8.txt',
+        'archive/24262.txt',
+        'archive/31279-8.txt',
+        'archive/43999.txt',
+        'archive/31256-8.txt',
+        'archive/41256-8.txt',
+        'archive/37840-8.txt',
+        'archive/37825-8.txt',
+        'archive/37766-8.txt',
+        'archive/31125-8.txt']
+
 
     authors = ['Homer',
         'Pessoa',
@@ -31,7 +35,6 @@ def read():
         'Unknown',
         'Harper']
 
-    
     data = open("archive/24269-8.txt", "rb")
     page = data.read()
     data.close 
