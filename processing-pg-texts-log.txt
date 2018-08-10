@@ -73,3 +73,4 @@ grep -rnwL '/home/marvin/projects/archive' -f ../carriage.txt | wc -l
 grep -rwL '/home/marvin/projects/archive' -f ../carriage.txt > ../missing-header.txt
 
 ##Metadata problems exist at source; non-english ebooks retrieved despite limit; need cleaning
+grep -rwL -f ../title.txt > ../not-english.txt
