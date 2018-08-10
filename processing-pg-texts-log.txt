@@ -72,5 +72,7 @@ grep -rnwL '/home/marvin/projects/archive' -f ../carriage.txt | wc -l
 ##writes the filenames to a file not matching conditional file.txt text
 grep -rwL '/home/marvin/projects/archive' -f ../carriage.txt > ../missing-header.txt
 
-##Metadata problems exist at source; non-english ebooks retrieved despite limit; need cleaning
-grep -rwL -f ../title.txt > ../not-english.txt
+## writes ebook titles in current working directory containing "language: English" into file, and then moves those files
+##into directory called not-english
+grep -riL 'Language: English' > ../not-english.txt
+cat ../not-english.txt | xargs mv -t ../not-english
