@@ -1,4 +1,4 @@
-#borrowed heavily from https://machinelearningmastery.com/how-to-develop-a-word-level-neural-language-model-in-keras
+#borrowed heavily from Jason Brownlee's word-level neural language tutorial
 
 import string
 
