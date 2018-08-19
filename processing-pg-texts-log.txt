@@ -78,5 +78,5 @@ grep -riL 'Language: English' > ../not-english.txt
 cat ../not-english.txt | xargs mv -t ../not-english
 
 #there are some file encoding errors python does not like once we start to serialize the data
-#serialization seems to like ascii text but not iso-8859; let's count those file types; takes a while to run against 75k #files
+#serialization seems to like ascii text but not iso-8859; let's count those file types; takes a while to run against 75k #files. Searching across all PG ebooks, turned up 23,918 files with iso-8859 encoding, taking 20 minutes
 file archive/* | grep -e 'ISO-8859 text' | wc -l
