@@ -5,7 +5,7 @@ import string
 # load doc into memory
 def load_doc(filename):
 	# open the file as read only
-	file = open(filename, 'r')
+	file = open(filename, 'rU') #U is a universal newline char setting
 	# read all text
 	text = file.read()
 	# close the file
@@ -29,12 +29,13 @@ def clean_doc(doc):
 
 # save tokens to file, one dialog per line
 def save_doc(lines, filename):
-	data = '\n'.join(lines)
-	file = open(filename, 'w')
-	file.write(data)
-	file.close()
+        data = '\n'.join(lines)
+        file = open(filename, 'w')
+        file.write(data)
+        file.close()
 
-#loads and cleans the doc
+
+#one line combining load, clean, save_doc; outputs sequences 
 def loadClean(dirt):
 	doc = load_doc(dirt)
 	tokens = clean_doc(doc)
@@ -52,3 +53,4 @@ def loadClean(dirt):
 
 	out_filename = 'republic_sequences.txt'	
 	save_doc(sequences, out_filename)
+
