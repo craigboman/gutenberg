@@ -6,3 +6,5 @@ Untitled.ipynb
 rdf-files.tar
 rdf-files.tar.zip
 republic/republic_sequences.txt
+*.py.swp
+
