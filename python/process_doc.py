@@ -51,6 +51,5 @@ def loadClean(dirt):
 		# store
 		sequences.append(line)
 
-	out_filename = 'republic_sequences.txt'	
+	out_filename = 'republic_sequences.txt'
 	save_doc(sequences, out_filename)
-

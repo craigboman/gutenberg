@@ -20,6 +20,9 @@ ipython = "*"
 requests = "*"
 "bs4" = "*"
 lxml = "*"
+spacy = "*"
+pipfile = "*"
+pyprind = "*"
 
 [requires]
 python_version = "3.5"
