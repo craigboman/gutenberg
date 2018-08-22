@@ -21,6 +21,11 @@ requests = "*"
 "bs4" = "*"
 lxml = "*"
 spacy = "*"
+<<<<<<< HEAD
+=======
+pipfile = "*"
+pyprind = "*"
+>>>>>>> 89e2d19542fb1e0cac2e68f8130b91347641ffa7
 
 [requires]
 python_version = "3.5"
