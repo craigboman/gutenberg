@@ -23,6 +23,7 @@ lxml = "*"
 spacy = "*"
 pipfile = "*"
 pyprind = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.5"

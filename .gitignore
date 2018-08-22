@@ -1,4 +1,9 @@
 cache/
+archive/
+books/
+metadata/
+not-english/
+pickle/
 
 .ipynb_checkpoints/
 Pipfile.lock
