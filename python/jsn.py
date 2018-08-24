@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 
 filename = 'metamorphosis_clean.txt'
 
-def pick(filename)
+def pick(filename):
     file = open(filename, 'rt')
     text = file.read()
     file.close()
