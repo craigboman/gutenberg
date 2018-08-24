@@ -25,10 +25,10 @@ def pick(filename):
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if not w in stop_words]
 
-    path = '../json/'
+    jsn= '../json/'
     ext = '.json'
     base = os.path.splitext(filename)[0]
-    merge = Path(path+base+ext)
+    merge = Path(jsn+base+ext)
     print(merge)
     test = merge.parts[0]+'/'+merge.parts[1]+'/'+merge.parts[2]
     print(test)
