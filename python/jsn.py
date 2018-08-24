@@ -28,8 +28,9 @@ def pick(filename):
     pth= '../json/'
     #failed attempt to split out base filename:  base = os.path.splitext(filename)[0]
     merge = os.path.join(pth, Path(filename).stem)
-    with open(merge, 'w') as f:
+    with open(merge+'.json', 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
-    jsn = merge+'.json'
-    os.rename(merge, jsn)
+    # jsn = merge+'.json'
+    # os.rename(merge, jsn)
+
