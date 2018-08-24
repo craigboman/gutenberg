@@ -26,6 +26,6 @@ def pick(filename):
     words = [w for w in words if not w in stop_words]
 
     with open(filename, 'w') as f:
-    json.dump(words, f, ensure_ascii=False)
+        json.dump(words, f, ensure_ascii=False)
     f.close()
 
