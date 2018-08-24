@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def pick(filename):
-    os.chdir('/mnt/volume_nyc3_01/gutenberg/books')
+    os.chdir('/mnt/volume_nyc3_01/gutenberg/archive')
     file = open(filename, 'rt', errors='ignore') #probably not ideal to ignore encoding errors; technical debt later
         #file = open(filename, 'rt', encoding= utf8') for iso-8859 encoded files
     text = file.read()
