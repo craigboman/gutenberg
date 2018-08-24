@@ -41,3 +41,6 @@ def loop():
     books = os.listdir()
     for i in books:
         pick(i)
+
+
+loop()
