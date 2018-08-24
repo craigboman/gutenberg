@@ -25,7 +25,8 @@ def pick(filename):
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if not w in stop_words]
 
-    with open(filename, 'w') as f:
+    path = '../json'
+    with open(os.path.join(path,filename), 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
 
