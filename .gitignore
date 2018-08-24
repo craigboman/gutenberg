@@ -4,6 +4,7 @@ books/
 metadata/
 not-english/
 pickle/
+json/
 
 .ipynb_checkpoints/
 Pipfile.lock
