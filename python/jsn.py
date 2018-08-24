@@ -32,6 +32,7 @@ def pick(filename):
     with open(merge+'.json', 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
+    print(filename)
     # jsn = merge+'.json'
     # os.rename(merge, jsn)
 
