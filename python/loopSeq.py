@@ -1,4 +1,4 @@
-import os
+import os, jsn
 from jsn import pick
 
 def loop():
@@ -6,3 +6,5 @@ def loop():
     books = os.listdir()
     for i in books:
         pick(i)
+
+loop()

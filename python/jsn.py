@@ -32,7 +32,12 @@ def pick(filename):
     with open(merge+'.json', 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
-    print(filename)
+    return filename
     # jsn = merge+'.json'
     # os.rename(merge, jsn)
 
+def loop():
+    os.chdir('/mnt/volume_nyc3_01/gutenberg/books')
+    books = os.listdir()
+    for i in books:
+        pick(i)
