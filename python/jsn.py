@@ -6,8 +6,8 @@ from nltk.corpus import stopwords
 filename = 'metamorphosis_clean.txt'
 
 def pick(filename):
-    file = open(filename, 'rt', errors='ignore')
-    #file = open(filename, 'rt', encoding= utf8') for iso-8859 encoded files
+    file = open(filename, 'rt', errors='ignore') #probably not ideal to ignore encoding errors; technical debt later
+        #file = open(filename, 'rt', encoding= utf8') for iso-8859 encoded files
     text = file.read()
     file.close()
 
