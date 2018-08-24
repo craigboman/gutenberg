@@ -25,7 +25,7 @@ def pick(filename):
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if not w in stop_words]
 
-    path= '../json/'
+    pth= '../json/'
     #failed attempt to split out base filename:  base = os.path.splitext(filename)[0]
 
     with open(os.path.join(path,Path(filename).stem), 'w') as f:
