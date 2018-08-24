@@ -1,9 +1,8 @@
-import os, json, pickle, string
+import os, json, pickle, string,
 from nltk.tokenize import word_tokenize
-
 from nltk.corpus import stopwords
+from pathlib import Path
 
-filename = 'metamorphosis_clean.txt'
 
 def pick(filename):
     file = open(filename, 'rt', errors='ignore') #probably not ideal to ignore encoding errors; technical debt later
@@ -30,6 +29,9 @@ def pick(filename):
     ext = '.json'
     base = os.path.splitext(filename)[0]
     merge = Path(path+base+ext)
-    with open(merge, 'w') as f:
+    print(merge)
+    test = merge.parts[0]+'/'+merge.parts[1]+'/'+merge.parts[2]
+    print(test)
+    with open(test, 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
