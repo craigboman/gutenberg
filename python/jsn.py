@@ -1,4 +1,4 @@
-import os, json, pickle, string,
+import os, json, pickle, string
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from pathlib import Path
@@ -28,6 +28,6 @@ def pick(filename):
     path= '../json/'
     #failed attempt to split out base filename:  base = os.path.splitext(filename)[0]
 
-    with open(os.path.join(path,file), 'w') as f:
+    with open(os.path.join(path,filename), 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
