@@ -29,6 +29,7 @@ def pick(filename):
     path = '../json/'
     ext = '.json'
     base = os.path.splitext(filename)[0]
+    merge = path+base+ext
     with open(path+base+ext, 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
