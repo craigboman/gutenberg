@@ -26,9 +26,9 @@ def pick(filename):
     stop_words = set(stopwords.words('english'))
     words = [w for w in words if not w in stop_words]
 
-    path = '../json'
+    path = '../json/'
     ext = '.json'
     base = os.path.splitext(filename)[0]
-    with open(os.path.join(path,base, ext), 'w') as f:
+    with open(path+base+ext, 'w') as f:
         json.dump(words, f, ensure_ascii=False)
     f.close()
