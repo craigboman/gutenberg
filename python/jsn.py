@@ -37,10 +37,9 @@ def pick(filename):
     # os.rename(merge, jsn)
 
 def loop():
-    os.chdir('/mnt/volume_nyc3_01/gutenberg/books')
+    os.chdir('/mnt/volume_nyc3_01/gutenberg/archive')
     books = os.listdir()
     for i in books:
         pick(i)
-
 
 loop()
