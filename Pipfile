@@ -24,6 +24,7 @@ spacy = "*"
 pipfile = "*"
 pyprind = "*"
 nltk = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.5"
