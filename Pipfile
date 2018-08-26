@@ -25,6 +25,7 @@ pipfile = "*"
 pyprind = "*"
 nltk = "*"
 gensim = "*"
+pyldavis = "*"
 
 [requires]
 python_version = "3.5"
