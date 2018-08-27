@@ -41,3 +41,29 @@ trigram_mod = gensim.models.phrases.Phraser(trigram)
 
 # See trigram example
 print(trigram_mod[bigram_mod[data_words[0]]])
+
+# Define functions for stopwords, bigrams, trigrams and lemmatization
+def remove_stopwords(texts):
+    return [[word for word in simple_preprocess(str(doc)) if word not in stop_words] for doc in texts]
+
+def make_bigrams(texts):
+    return [bigram_mod[doc] for doc in texts]
+
+def make_trigrams(texts):
+    return [trigram_mod[bigram_mod[doc]] for doc in texts]
+
+def lemmatization(texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
+    """https://spacy.io/api/annotation"""
+    texts_out = []
+    for sent in texts:
+        doc = nlp(" ".join(sent))
+        texts_out.append([token.lemma_ for token in doc if token.pos_ in allowed_postags])
+    return texts_out
+
+
+# Form Bigrams
+data_words_bigrams = make_bigrams(data_words)
+
+
+
+#running into data format errors; go back earlier and look at the import dataset; format PG ebooks as pandas format
