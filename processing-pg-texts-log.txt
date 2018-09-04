@@ -3,8 +3,8 @@
 ##Despite this, if you have access to a linux terminal, these bash scripts will be super useful.
 
 download
-wget -H -w 2 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=en 
-##where -h is recursive and "-w 2" is a two second delay between requests
+wget -H -w 5 -m http://www.gutenberg.org/robot/harvest?filetypes[]=txt&langs[]=en 
+##where -h is recursive and "-w 5" is a five second delay between requests
 
 unzip
 while [ "`find . -type f -name '*.zip' | wc -l`" -gt 0 ]; do find -type f -name "*.zip" -exec unzip -- '{}' \; -exec rm -- '{}' \;; done
