@@ -4,7 +4,7 @@ from pathlib import Path
 
 def df(filename):
     path = '/mnt/volume_nyc3_01/gutenberg/archive/'
-    mp = '/mnt/volume_nyc3_01/gutenberg/metadata'    
+    mp = '/mnt/volume_nyc3_01/gutenberg/metadata/'    
 
     all = os.lisdir(path)
     part = all[:10]
