@@ -1,14 +1,23 @@
 import os, json, pandas, string
-
+import pandas as pd
+from pathlib import Path
 
 def df(filename):
-    path = '/mnt/volume_nyc3_01/gutenberg/json/'
+    path = '/mnt/volume_nyc3_01/gutenberg/archive/'
     all = os.lisdir(path)
     part = all[:10]
-    for i in part:
-	file = open(path+i, 'rt', errors='ignore') #not ideal to ignore encoding errors
-        df = json.load(file)
-	file.close()
+    i = part[1] #used later for stem metadata lookup
+    file = open(path+i, 'rt', errors='ignore') #not ideal to ignore encoding errors
+    df = file.read()
+    file.close()
+
+    #lookup stem metadata
+    stm = Path(i).stem
+    #should be conditional string split 
+    i = i.split('-')[0]
+
+    
+    
 
 #continue trying to load pandas dataframes, but possibly going back to archive rather than json
 #where one is ebook, second column is ebook subject headings, using filename as left-most index
