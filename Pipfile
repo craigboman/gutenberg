@@ -26,6 +26,7 @@ pyprind = "*"
 nltk = "*"
 gensim = "*"
 pyldavis = "*"
+rdflib = "*"
 
 [requires]
 python_version = "3.5"

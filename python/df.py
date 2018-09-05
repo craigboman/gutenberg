@@ -18,7 +18,10 @@ def df(filename):
     #should be conditional string split 
     i = i.split('-')[0]
 
-    #use python xml decode to read .rdf files    
+    #xml decode to read .rdf files    
+    obj = untangle.parse(mp+i+'/'+i+'.rdf')
+
+
 
 #continue trying to load pandas dataframes, but possibly going back to archive rather than json
 #where one is ebook, second column is ebook subject headings, using filename as left-most index
