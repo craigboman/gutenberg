@@ -27,6 +27,7 @@ nltk = "*"
 gensim = "*"
 pyldavis = "*"
 rdflib = "*"
+aws-sam-cli = "*"
 
 [requires]
 python_version = "3.5"
