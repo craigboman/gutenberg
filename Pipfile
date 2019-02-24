@@ -28,6 +28,7 @@ gensim = "*"
 pyldavis = "*"
 rdflib = "*"
 aws-sam-cli = "*"
+awscli = "*"
 
 [requires]
 python_version = "3.5"

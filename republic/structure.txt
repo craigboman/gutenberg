@@ -1,0 +1,17 @@
+process_doc.py
+
+    load_doc(filename)
+
+    clean_doc(doc)
+
+    save_doc(lines,filename)
+
+    loadClean(dirt)
+    
+    
+from process_doc import loadClean
+
+encode.py
+
+
+7/6 - continue encoding data 
