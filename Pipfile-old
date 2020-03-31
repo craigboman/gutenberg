@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+tokenizer = "*"
+keras = "*"
+tensorflow = "*"
+scipy = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+statsmodels = "*"
+sklearn = "*"
+theano = "*"
+ipython = "*"
+requests = "*"
+"bs4" = "*"
+lxml = "*"
+spacy = "*"
+pipfile = "*"
+pyprind = "*"
+nltk = "*"
+gensim = "*"
+pyldavis = "*"
+rdflib = "*"
+aws-sam-cli = "*"
+awscli = "*"
+
+[requires]
